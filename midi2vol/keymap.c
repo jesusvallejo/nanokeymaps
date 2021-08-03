@@ -1,4 +1,4 @@
-/* Copyright 2020 Duckle
+/* Copyright 2020 Duckle, 2021 Jesús Vallejo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ enum layer_names {
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-    DEFAULT = SAFE_RANGE,
+    DEFAULT,
     SPOTIFY,DISCORD,CHROME 
 };
 
