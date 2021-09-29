@@ -58,10 +58,7 @@ uint8_t midi2vol = 0x3E;
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes { // In order to add more volume controls, add here a custom keycode, ex: VLC
-    DEFAULT,
-    SPOTIFY,
-    DISCORD,
-    CHROME
+    DEFAULT,DISCORD,CHROME,SPOTIFY
     //,VLC 
 };
 
@@ -73,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MPLY, KC_MNXT,  KC_COPY,
         KC_MUTE,  KC_MPRV, KC_PASTE, KC_ENTER
     ),
-        [_NAV] = LAYOUT(
+    [_NAV] = LAYOUT(
         MO(_TOOGLE),
         KC_SPC, KC_UP, KC_BSPACE,
-        KC_RIGHT, KC_DOWN, KC_LEFT, KC_ENTER      
+        KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENTER      
     ),
     [_VOLUME] = LAYOUT(
         MO(_TOOGLE),
@@ -91,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LIGHTS] = LAYOUT(
         MO(_TOOGLE),
         RGB_TOG, RGB_MOD, RGB_VAI,
-        BL_SAI, BL_BRTG, BL_STEP, KC_LSFT
+        RGB_SAI, BL_BRTG, BL_STEP, KC_LSFT
     ),
     [_EDIT] = LAYOUT(
         MO(_TOOGLE),
@@ -148,7 +145,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) { // In order to
             }
             break;
         /*
-        case CHROME:
+        case VLC:
             if (record->event.pressed) {
                 // when keycode VLC is pressed
                 midi2vol= 0x42;
