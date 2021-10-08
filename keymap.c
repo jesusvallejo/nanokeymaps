@@ -58,8 +58,7 @@ uint8_t midi2vol = 0x3E;
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes { // In order to add more volume controls, add here a custom keycode, ex: VLC
-    DEFAULT,DISCORD,CHROME,SPOTIFY
-    //,VLC 
+    DEFAULT= SAFE_RANGE,SPOTIFY,DISCORD,CHROME//,VLC
 };
 
 
